@@ -9,7 +9,7 @@ class Student
 
   end
 
-  def is_odd
+  def age_odd?
     @age.odd?
   end
 end
@@ -26,7 +26,7 @@ array[2] = student3
 puts array.size
 
 
-puts student1.is_odd
+puts student1.age_odd?
 
 puts "____________________________________________________________________"
 
