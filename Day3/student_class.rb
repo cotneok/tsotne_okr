@@ -1,5 +1,5 @@
 class Student
-  attr_accessor :debt, :name
+  attr_accessor :debt, :name, :gpa, :last_name
 
   def initialize(name, last_name, gpa, debt)
     @name = name
