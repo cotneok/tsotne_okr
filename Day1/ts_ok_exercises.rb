@@ -30,7 +30,7 @@ puts student1.age_odd?
 
 puts "____________________________________________________________________"
 
-
+#Gadaketebuli 3 tavshi naswavli metodis >> inject << gamoyenebit puts [1, 3, 5, 7, 10].inject(:+)
 arr2 = [1, 3, 5, 7, 10]
 sum = 0
 arr2.each do |number|
@@ -111,14 +111,11 @@ puts arrya_2_sum(arr3)
 puts "____________________________________________________________________"
 
 def array_sum_to_n(array, n)
-  if array.sample(2).sum == n
-    true
-  elsif array.size == 0 && n == 0
-    true
-  end
+  array.each { |element| return true if array.include?(n - element)}
+  return true if array.size == 0 && n == 0
 end
-arr4 = []
-puts array_sum_to_n(arr4, 0)
+arr4 = [1, 2, 3, 4]
+puts array_sum_to_n(arr4, 7)
 
 puts "____________________________________________________________________"
 
