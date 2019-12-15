@@ -8,22 +8,19 @@ puts "____________________________________________________"
 #2
 new_array = []
 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].each do |i|
-  puts i && new_array << i if i > 5
+  i && new_array << i if i > 5
 end
-p new_array
+puts new_array
+#Using map method instead of each [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map { |i| puts i if i > 5}
 
 puts "____________________________________________________"
 #3
-new_array1 = []
-new_array.select do |i|
-  new_array1 << i if i.odd?
-end
-p new_array1
+p new_array.select {|i| i.odd?}
 
 puts "____________________________________________________"
 #4
-original_array.append ("11")
-original_array.prepend ("0")
+original_array.push ("11")
+original_array.unshift ("0")
 p original_array
 
 puts "____________________________________________________"
@@ -52,7 +49,7 @@ string_array.pop
 p string_array
 string_array.shift
 p string_array
-fruit_string1 = string_array.join(",")
+fruit_string1 = string_array.join(", ")
 puts fruit_string1
 
 puts "____________________________________________________"
