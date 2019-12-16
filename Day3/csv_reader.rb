@@ -15,4 +15,5 @@ class CsvReader
     @students.each {|student| debt += student.debt.to_f}
     debt
   end
+  
 end
