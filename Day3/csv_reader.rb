@@ -30,12 +30,20 @@ class CsvReader
     end
   end
 
-  # def read_gpa(csv_file)
-  #   student_gpa = {}
-	# 	CSV.foreach(csv_file, headers: true) do |row|
-	# 		student = "#{row['name']}"
-	# 		student_gpa[student] = @students[student]['gpa']
-	# 	end
-	# 	student_gpa
-	# end
+  def student_gpa
+    hash_gpa = {}
+    @students.each do |i|
+      hash_gpa[i.gpa] = i.name
+    end
+    hash_gpa
+  end
+
+  def second_csv_array(filename)
+    arr1 = []
+    CSV.foreach(filename, headers: true) do |row|
+			student = "#{row['name']}"
+			arr1 << student
+		end
+		arr1
+  end
 end
