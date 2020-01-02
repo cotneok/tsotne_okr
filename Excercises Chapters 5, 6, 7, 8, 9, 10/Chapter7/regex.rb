@@ -10,6 +10,6 @@ if string =~ /Mazda/
 end
 puts"___________________________________________________"
 #Writing in files
-File.foreach("testfile.rb").with_index do |line, index|
+File.foreach("file.txt").with_index do |line, index|
   puts "#{index}: #{line}" if line =~ //
 end
