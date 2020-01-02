@@ -13,3 +13,8 @@ puts"___________________________________________________"
 File.foreach("file.txt").with_index do |line, index|
   puts "#{index}: #{line}" if line =~ //
 end
+puts"___________________________________________________"
+#2 Changing strings with patterns, using sub and gsub methods
+puts string.sub(/i/, "I")
+puts string.gsub(/i/, "I")
+#We create copy of string so original is not mutated, we can use exclamation mark to mutate original string variable.
