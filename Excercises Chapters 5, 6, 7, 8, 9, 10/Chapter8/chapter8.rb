@@ -90,18 +90,18 @@ end
 different_args(*1.upto(6))
 different_args("one", *["two", "three", "four"], "five", "six")
 puts"________________________________________________________________"
-# puts "Please input D for divide and M for multiply"
-# operator = gets.chomp
-# puts "How many times, please input integer"
-# times = Integer(gets)
-# if operator =~ /^D/
-#   outcome = lambda { |n| n/times }
-# elsif operator =~ /^M/
-#   outcome = lambda { |n| n*times}
-# else
-#   puts "Wrong input"
-# end
-# puts ([2, 4, 6, 8].map(&outcome).join(", "))
+puts "Please input D for divide and M for multiply"
+operator = gets.chomp
+puts "How many times, please input integer"
+times = Integer(gets)
+if operator =~ /^D/
+  outcome = lambda { |n| n/times }
+elsif operator =~ /^M/
+  outcome = lambda { |n| n*times}
+else
+  puts "Wrong input"
+end
+puts ([2, 4, 6, 8].map(&outcome).join(", "))
 puts"________________________________________________________________"
 class Books
   def Books.search(title, author, number_of_pages: 200, **rest)
