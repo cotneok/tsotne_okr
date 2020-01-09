@@ -13,10 +13,7 @@ strings.partition { |string| string.length > 2 }
 puts"____________________________________________"
 #2
 def english_date(iso_date)
-  # To make the code below work, define a
-  # month_names hash with "01" through "12"
-  # as keys, and "January" through "December"
-  # as values.
+
   date_parts = iso_date.split("-")
   year = date_parts[0]
   month = date_parts[1]
@@ -29,21 +26,6 @@ end
 puts english_date("2002-12-20")
 puts"____________________________________________"
 #3
-# class MotorizedBatteryPoweredThing
-#   attr_accessor :power_level
-#
-#   def initialize
-#     self.power_level = 0
-#   end
-#
-#   def charge
-#     self.power_level += 1
-#   end
-#
-#   def rev_motor
-#     puts "Revving motor!"
-#   end
-# end
 require_relative 'motorized.rb'
 require_relative 'batterypowered.rb'
 
@@ -79,7 +61,7 @@ puts"____________________________________________"
 
 class Grade
   include Comparable
-  VALIDATES = ["A", "B", "C", "D", "F"]
+  validates = ["A", "B", "C", "D", "F"]
   attr_accessor :letter
 
     def initialize(letter)
@@ -87,20 +69,14 @@ class Grade
   end
 
   def letter=(grade)
-    unless VALIDATES.include?(grade)
+    unless validates.include?(grade)
       raise "#{grade} is not valid, please enter A, B, C, D, or F"
     end
     @letter = grade
   end
 
   def <=>(other)
-    if other.letter < letter
-      return -1
-    elsif other.letter > letter
-      return 1
-    else
-      return 0
-    end
+    other.letter <=> letter
   end
 
 end
